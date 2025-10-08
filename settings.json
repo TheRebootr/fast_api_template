@@ -1,0 +1,60 @@
+{
+  "python.analysis.typeCheckingMode": "standard",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.languageServer": "Pylance",
+  "ruff.enable": true,
+  "ruff.organizeImports": true,
+  "ruff.fixAll": true,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
+  },
+  "python.analysis.stubPath": ".vscode",
+  "python.testing.pytestArgs": ["."],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.analysis.extraPaths": ["app"],
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.pytest_cache": true,
+    "**/.ruff_cache": true,
+    "**/*.egg-info": true
+  },
+  "files.watcherExclude": {
+    "**/.venv/**": true
+  },
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    { "text": "Use conventional commit format: type(scope): description" },
+    { "text": "Use imperative mood: 'Add feature' not 'Added feature'" },
+    { "text": "Keep entire commit under 80 characters" },
+    { "text": "Use types: feat, fix, docs, style, refactor, perf, chore, ci" },
+    { "text": "Include scope when relevant (e.g., api, ui, auth)" }
+  ],
+  "github.copilot.chat.pullRequestDescriptionGeneration.instructions": [
+    { "text": "Start title with '[TASK-] ' prefix format" },
+    { "text": "Keep title under 80 characters including prefix" },
+    { "text": "Use imperative mood: 'Add feature' not 'Added feature'" },
+    { "text": "Follow this structured format for PR descriptions:" },
+    { "text": "### New Features" },
+    { "text": "- [Feature description]" },
+    { "text": "### Changes" },
+    { "text": "- [Change description]" },
+    { "text": "### Fixes" },
+    { "text": "- [Fix description]" },
+    { "text": "Use bullet points for each item under appropriate sections" },
+    { "text": "Be specific and descriptive - avoid generic terms" },
+    { "text": "Include only relevant sections - omit empty sections" },
+    { "text": "Use present tense for descriptions" },
+    { "text": "Describe only the commits made since last PR" }
+  ]
+}
